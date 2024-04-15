@@ -125,5 +125,37 @@ select {
     font-size: 15px;
 }
 
+@media (max-width:900px) {
+    .container {
+        max-width:50%;  
+    } 
+    .modal-content {
+        width: 60%;
+        height: 50%;
+        
+    }
+ }
 
- 
+
+ @media (max-width:750px) {
+    .container {
+        max-width:80%;
+    } 
+    .modal-content {
+        width: 70%;
+        height: 50%;
+        
+    }
+ }
+
+
+ @media (max-width:550px) {
+    .container {
+        max-width:90%;   
+    }
+    .modal-content {
+        width: 60%;
+        height: 50%;
+        
+    }
+ }

@@ -22,33 +22,26 @@ calculateBtn.addEventListener("click", function(event) {
     if (!grossIncome.value || isNaN(parseFloat(grossIncome.value))) {
         alert("Gross Annual Income is required and must be a number.");
         valid = false;
-    } else {
-        errorIconIncome.style.display = "none";
-    }
-
+    } 
     // Check Extra Income
-    if (!extraIncome.value || isNaN(parseFloat(extraIncome.value))) {
+   else if (!extraIncome.value || isNaN(parseFloat(extraIncome.value))) {
         alert('Extra Income is required and must be a number.');
         valid = false;
-    } else {
-        errorIconExtraIncome.style.display = "none";
-    }
+    } 
 
     // Check Age Group
-    if (!age.value) {
+   else if (!age.value) {
         alert ("Age Group is required.");
         valid = false;
-    } else {
-        errorIconAge.style.display = "none";
-    }
-
+    } 
     // Check Deductions
-    if (!deductions.value || isNaN(parseFloat(deductions.value))) {
+    else if (!deductions.value || isNaN(parseFloat(deductions.value))) {
          
       alert("Deductions is required and must be a number.");
         valid = false;
-    } else {
-        errorIconDeductions.style.display = "none";
+    } else{
+        valid = true;
+
     }
 
     if (!valid) {
