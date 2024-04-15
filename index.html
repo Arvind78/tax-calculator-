@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    
+    <div class="container">
+        <form id="tax-form">
+            <div class="form-group">
+                <label for="gross-income">Enter gross annual income 
+                </label>
+                <input type="number" id="gross-income" name="grossIncome" >
+                <span class="error-icon" aria-hidden="true">!</span>
+                <span class="tooltip"></span>
+            </div>
+            <div class="form-group">
+                <label for="extra-income">Enter extra income </label>
+                <input type="number" id="extra-income" name="extraIncome" >
+                <span class="error-icon" aria-hidden="true"></span>
+                <span class="tooltip"></span>
+            </div>
+            <div class="form-group">
+                <label for="age">Enter age group</label>
+                <select id="age" name="age" >
+                    <option value="">Select Age Group</option>
+                    <option value="<40">&lt; 40</option>
+                    <option value=">=40 & <60">40 to 59</option>
+                    <option value=">=60">60 or more</option>
+                </select>
+                <span class="error-icon" aria-hidden="true"></span>
+                <span class="tooltip"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="deductions"> Enter total applicable deductions </label>
+                <input type="number" id="deductions" name="deductions" >
+                <span class="error-icon-deductions" aria-hidden="true"></span>
+                <span class="tooltip"></span>
+            </div>
+          
+            <button id="calculate-btn" type="submit">Submit</button>
+        </form>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p id="result-container"></p>
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+
+       
+    </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
